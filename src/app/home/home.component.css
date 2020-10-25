@@ -1,0 +1,68 @@
+.body-content{
+    padding: 12px;
+}
+#tag{
+    font-family: "Syne Mono";
+    /*
+    font-family: "Sofia";
+    font-family: "Krona One";
+    font-family: "Josefin Sans";
+    font-family: "Pacifico";
+    font-family: "Vampiro One";
+    font-family: "Raleway";
+    font-family: "Libre Baskerville"; */
+}
+.jumbotron{
+    background-color: brown;
+    border: 5px solid #fab908;
+}
+.left{
+    padding-left: 200px;
+    border-right: 2px solid wheat;
+}
+.right{
+    padding-right: 200px;
+    text-align: justify;
+}
+p{
+    font-family: "Josefin Sans";
+}
+.card-profile, .card-text{
+    color: black;
+    font-family: "Josefin Sans";
+}
+#git-button-img,#quora-button-img,#mail-me,#linkedin-button-img{
+    padding-right: 5px;
+    height: 35px;
+}
+#git-button-img:hover,#quora-button-img:hover,#mail-me:hover,#linkedin-button-img:hover{
+    opacity: .7;
+}
+.experience{
+    position: relative;
+    margin: 0px;
+    padding: 10px;
+}
+.experience::before{
+    position: absolute;
+    content: " ";
+    height: 500px;
+    width: 2px;
+    background-color: white;
+    border: 1px solid white;
+}
+.experience li{
+    padding-left: 20px;
+    padding-bottom: 20px;
+    list-style: none;
+}
+.experience li span::before{
+    content: " ";
+    border: 3px solid coral;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 1px;
+    background:#181818;
+}

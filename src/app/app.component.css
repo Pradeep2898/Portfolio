@@ -1,0 +1,20 @@
+.footer{
+    box-sizing: border-box;
+    border-top: 1px solid gray;
+    width: 100%;
+    min-height: 100%;
+}
+.footer ul{
+    margin-bottom: 0;
+    padding: 25px;
+}
+.footer ul li{
+    display: inline-block;
+    padding-right: 15px;
+}
+.footer ul li a:hover{
+    border-bottom: 2px solid white;
+}
+.footer ul li a{
+    text-decoration: none;
+}
