@@ -6,24 +6,27 @@
                 <p class="lead">Glad you made time to go through my portfolio. It's always a pleasure to hear feedbacks from people.</p>
                 <hr style="background-color: white;">
                 <p>Please fill out the details below to reach me.</p>
-                <form>
+                <form [formGroup]="myForm" autocomplete="off">
                     <div class="form-group">
-                      <label for="exampleFormControlInput1">Email address</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                      <label for="email">Email address</label>
+                      <input type="email" class="form-control" id="email" placeholder="name@example.com" formControlName="email" [ngClass]="{'is-invalid':myForm.get('email').invalid && myForm.get('email').touched}" [ngStyle]="{'background-color': (myForm.get('email').invalid && myForm.get('email').touched) ? '#ff9999' : (!(myForm.get('email').invalid) ? '#1aff66' :null)}">
+                      <small *ngIf="myForm.get('email').invalid && myForm.get('email').touched" class="text-danger">*Email Incorrrect</small>
                     </div>
                     <div class="form-group">
-                      <label for="exampleFormControlSelect1">What you do to be exact?</label>
-                      <select class="form-control" id="exampleFormControlSelect1">
+                      <label for="role">What you do to be exact?</label>
+                      <select class="form-control" id="role" formControlName="role" [class.is-invalid]="myForm.get('role').invalid && myForm.get('role').touched" [ngStyle]="{'background-color': (myForm.get('role').invalid && myForm.get('role').touched) ? '#ff9999' : (!(myForm.get('role').invalid) ? '#1aff66' :null)}">
                         <option>Free Lancer</option>
                         <option>From an Organization</option>
                         <option>Just a curious Individual</option>
                         <option>Student</option>
                         <option>A Huge Fan</option>
                       </select>
+                      <small *ngIf="myForm.get('role').invalid && myForm.get('role').touched" class="text-danger">*Don't be shy !</small>
                     </div>
                     <div class="form-group">
-                      <label for="exampleFormControlTextarea1">Life is busy, since we are not friend. May I know what made you contact me?</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      <label for="aboutU">Life is busy, since we are not friend. May I know what made you contact me?</label>
+                      <textarea appCheckLength [class.is-invalid]="myForm.get('aboutU').invalid && myForm.get('aboutU').touched" class="form-control" id="aboutU" rows="3" formControlName="aboutU" placeholder="Atleast 25 characters"></textarea>
+                      <small *ngIf="myForm.get('aboutU').invalid && myForm.get('aboutU').touched" class="text-danger">*Love to hear more about you.</small>
                     </div>
                     <p class="lead">
                         <button type="submit" class="btn btn-lg btn-outline-light">Just Send It</button>
