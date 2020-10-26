@@ -1,7 +1,13 @@
-.bc{
+.body-content{
     padding: 15px;
 }
 .jumbotron{
-    background-color: #0e033f;
-    border: 5px solid #fa6108;
+    background: none;
+    border: 5px solid white;
+    border-radius: 0;
 }
+@media only screen and (max-width: 320px) {
+    .body-content{
+        width:400px;
+    }
+} 

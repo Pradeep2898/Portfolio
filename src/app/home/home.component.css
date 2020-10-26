@@ -3,33 +3,24 @@
 }
 #tag{
     font-family: "Syne Mono";
-    /*
-    font-family: "Sofia";
-    font-family: "Krona One";
-    font-family: "Josefin Sans";
-    font-family: "Pacifico";
-    font-family: "Vampiro One";
-    font-family: "Raleway";
-    font-family: "Libre Baskerville"; */
 }
 .jumbotron{
-    background-color: brown;
-    border: 5px solid #fab908;
+    background: none;
+    border: 4px solid white;
+    border-radius: 0;
+}
+.container{
+    width: 90%;
 }
 .left{
-    padding-left: 200px;
     border-right: 2px solid wheat;
 }
+.left .card{
+    width: 80%;
+    float: right;
+}
 .right{
-    padding-right: 200px;
     text-align: justify;
-}
-p{
-    font-family: "Josefin Sans";
-}
-.card-profile, .card-text{
-    color: black;
-    font-family: "Josefin Sans";
 }
 #git-button-img,#quora-button-img,#mail-me,#linkedin-button-img{
     padding-right: 5px;
@@ -45,8 +36,8 @@ p{
 }
 .experience::before{
     position: absolute;
-    content: " ";
-    height: 500px;
+    content: "-";
+    height: 69%;
     width: 2px;
     background-color: white;
     border: 1px solid white;
@@ -64,5 +55,24 @@ p{
     border-radius: 50%;
     position: absolute;
     left: 1px;
-    background:#181818;
+    background:black;
 }
+@media only screen and (max-width: 576px) {
+    .left{   
+        border-right: 0;
+        border-bottom: 2px solid wheat;
+        padding-bottom: 10px;
+    }
+    .left .card{
+        width: 100%;
+        float: none;
+    }
+    .right{
+        padding-top: 10px;
+    }
+  }
+@media only screen and (max-width: 320px) {
+      .body-content{
+          width:400px;
+      }
+  }  

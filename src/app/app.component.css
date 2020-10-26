@@ -1,8 +1,12 @@
 .footer{
+    font-family: "Poppins";
+    background-color: black;
     box-sizing: border-box;
     border-top: 1px solid gray;
     width: 100%;
     min-height: 100%;
+    display: flex;
+    justify-content: center;
 }
 .footer ul{
     margin-bottom: 0;
@@ -18,3 +22,8 @@
 .footer ul li a{
     text-decoration: none;
 }
+@media only screen and (max-width: 320px) {
+    .navbar, .footer{
+        width:400px;
+    }
+}  

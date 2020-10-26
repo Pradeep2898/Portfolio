@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background-color: #181818;
+    /* background-color: #181818; */
+    background-image: url("./assets/images/origin.gif");
+    background-size: auto;
     color: #ffffff;
-    font-family: "Poppins";
+    font-family: "Muli";
 }
