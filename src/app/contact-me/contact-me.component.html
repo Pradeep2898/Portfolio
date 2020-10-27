@@ -6,7 +6,7 @@
                 <p class="lead">Glad you made time to go through my portfolio. It's always a pleasure to hear feedbacks from people.</p>
                 <hr style="background-color: white;">
                 <p>Please fill out the details below to reach me.</p>
-                <form [formGroup]="myForm" autocomplete="off">
+                <form [formGroup]="myForm" autocomplete="off" (ngSubmit)="onSubmit(myForm.value)">
                     <div class="form-group">
                       <label for="email">Email address</label>
                       <input type="email" class="form-control" id="email" placeholder="name@example.com" formControlName="email" [ngClass]="{'is-invalid':myForm.get('email').invalid && myForm.get('email').touched}" [ngStyle]="{'background-color': (myForm.get('email').invalid && myForm.get('email').touched) ? '#ff9999' : (!(myForm.get('email').invalid) ? '#1aff66' :null)}">
@@ -25,14 +25,19 @@
                     </div>
                     <div class="form-group">
                       <label for="aboutU">Life is busy, since we are not friend. May I know what made you contact me?</label>
-                      <textarea appCheckLength [class.is-invalid]="myForm.get('aboutU').invalid && myForm.get('aboutU').touched" class="form-control" id="aboutU" rows="3" formControlName="aboutU" placeholder="Atleast 25 characters"></textarea>
+                      <textarea appCheckLength [class.is-invalid]="myForm.get('aboutU').invalid && myForm.get('aboutU').touched" class="form-control" id="aboutU" rows="3" formControlName="aboutU" placeholder="Atleast 30 characters"></textarea>
                       <small *ngIf="myForm.get('aboutU').invalid && myForm.get('aboutU').touched" class="text-danger">*Love to hear more about you.</small>
                     </div>
                     <p class="lead">
-                        <button type="submit" class="btn btn-lg btn-outline-light">Just Send It</button>
+                        <button type="submit" class="btn btn-lg btn-outline-light" [disabled]="myForm.invalid">
+                          <span class="spinner-border spinner-border-sm text-light" role="status" aria-hidden="true"></span>Just Send It</button>
                       </p>
                   </form>
-              </div>
+              <small class="text-info">There are lot of bug. It might be the issue I didn't get your words. Mail me @ <a href="mailto:spanad2898@gmail.com">spanad2898@gmail.com</a></small>
+            </div>
         </div>
+        <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">
+          <p style="color: white; z-index: -1">Please Wait. </p>  
+        </ngx-spinner>
     </body>
 </html>
