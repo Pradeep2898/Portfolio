@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators  } from '@angular/forms';
 import { ServicesService } from '../services.service';
-import { NgxSpinnerService } from "ngx-spinner"; 
+import { NgxSpinnerService } from "ngx-spinner";
+import { Details } from '../models/Details';
 
 @Component({
   selector: 'app-contact-me',
@@ -11,6 +12,7 @@ import { NgxSpinnerService } from "ngx-spinner";
 export class ContactMeComponent implements OnInit {
 
   myForm: FormGroup;
+  data:Details;
 
   constructor(private formBuilder:FormBuilder, private serv:ServicesService, private spnr:NgxSpinnerService) {
     this.myForm = this.formBuilder.group({
@@ -21,6 +23,9 @@ export class ContactMeComponent implements OnInit {
   }
   
   ngOnInit(): void {
+    this.serv.getaboutMeData().subscribe(data => {
+      this.data=data;
+    })
   }
 
   onSubmit(data:any){

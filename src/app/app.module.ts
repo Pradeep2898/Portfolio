@@ -11,6 +11,9 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
 import { HomeComponent } from './home/home.component';
 import { CheckLengthDirective } from './check-length.directive';
 import { ServicesService} from './services.service';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { ServicesService} from './services.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    AngularFireModule.initializeApp(environment.firebase, 'portfolio'),
+    AngularFirestoreModule
   ],
   providers: [ServicesService],
   bootstrap: [AppComponent]

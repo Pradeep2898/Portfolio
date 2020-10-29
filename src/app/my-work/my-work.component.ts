@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Work } from '../models/Work';
+import { ServicesService } from '../services.service';
 
 @Component({
   selector: 'app-my-work',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyWorkComponent implements OnInit {
 
-  constructor() { }
+  work:Work[];
+
+  constructor(private serv:ServicesService) { }
 
   ngOnInit(): void {
+    this.serv.getWorkList().subscribe(data => {
+      this.work = data;
+      console.log(this.work);
+    });
   }
 
 }

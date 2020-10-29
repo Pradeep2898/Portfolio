@@ -1,37 +1,30 @@
- <div class="body-content">
-  <div class="card-deck">
-    <div class="card border-light text-white mb-3" style="background-color: rgba(255, 255, 255, 0.1);">
-      <img class="card-img-top" src="../../assets/images/cubeics.png"  alt="cubeics">
+ <div class="body-content" >
+  <ul *ngFor="let wk of work">
+    <li style="display: inline;">
+      <div class="card border-light text-white col-sm-4" style="background-color: #ffffff1a;">
+        <img class="card-img-top" [src]="wk.image"  alt="project preview">
+        <div class="card-body">
+          <h5 class="card-title"  style="border-left: 3px solid rosybrown; padding-left: 5px;">{{wk.title}}</h5>
+          <p class="card-text">{{wk.desc}}</p>
+          <a [attr.href]="wk.link" target="_blank">Try it out</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">{{wk.date}}</small>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <!-- <div class="card-deck" *ngFor="let wk of work">
+    <div class="card border-light text-white mb-3" style="background-color: #ffffff1a;">
+      <img class="card-img-top" [src]="wk.image"  alt="project preview">
       <div class="card-body">
-        <h5 class="card-title"  style="border-left: 3px solid rosybrown; padding-left: 5px;">Cubeics Android Game</h5>
-        <p class="card-text">My first ever experiment in game development. Lot of thanks to various YouTube vidoes and online stuffs. This project was developed in Unity Game Engine.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.Howdy.Cubeics" target="_blank">Try it out</a>
+        <h5 class="card-title"  style="border-left: 3px solid rosybrown; padding-left: 5px;">{{wk.title}}</h5>
+        <p class="card-text">{{wk.desc}}</p>
+        <a [attr.href]="wk.link" target="_blank">Try it out</a>
       </div>
       <div class="card-footer">
-        <small class="text-muted">December 16th, 2018</small>
+        <small class="text-muted">{{wk.date}}</small>
       </div>
     </div>
-    <div class="card border-light text-white mb-3" style="background-color: rgba(255, 255, 255, 0.1);">
-      <img class="card-img-top" src="../../assets/images/dandelion.png"  alt="dandelion">
-      <div class="card-body">
-        <h5 class="card-title" style="border-left: 3px solid rosybrown; padding-left: 5px;">Dandelion Game</h5>
-        <p class="card-text">Again after so much time to kill and boredom made me to work on this project. This project took lesser time as compared to previous one, obviously learned from mistake. Still I prefer the first one the best one among these two.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.Howdy.Dandelion" target="_blank">Try it out</a>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">April 8, 2019</small>
-      </div>
-    </div>
-    <div class="card border-light text-white mb-3" style="background-color: rgba(255, 255, 255, 0.1);">
-      <img class="card-img-top" src="../../assets/images/quora.png" alt="quora">
-      <div class="card-body">
-        <h5 class="card-title"  style="border-left: 3px solid rosybrown; padding-left: 5px;">Quora UI Clone</h5>
-        <p class="card-text">Well this one is interesting one. Not a complex Angular Ptoject or something, but the fact this whole project is developed and implemented using Termux on an Android Smartphone. In case if you get to know how I did this on phone check <a href="https://qr.ae/pN4YEc" target="_blank">this</a> answer.</p>
-        <a href="https://quora-ui-clone.herokuapp.com" target="_blank">Live Preview</a>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">October 2020</small>
-      </div>
-    </div>
-  </div>
+  </div> -->
 </div> 
