@@ -3,11 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --output-path angularapp  --aot --prod"
+  },
+  "engines": {
+    "node": "v12.19.0",
+    "npm": "6.14.8"
   },
   "private": true,
   "dependencies": {
@@ -19,12 +24,16 @@
     "@angular/platform-browser": "~10.1.6",
     "@angular/platform-browser-dynamic": "~10.1.6",
     "@angular/router": "~10.1.6",
+    "@angular/cli": "~10.1.7",
+    "@angular/compiler-cli": "~10.1.6",
     "angularfire2": "^5.4.2",
+    "express": "^4.17.1",
     "firebase": "^7.24.0",
     "ngx-spinner": "^10.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "typescript": "~4.0.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1001.7",
