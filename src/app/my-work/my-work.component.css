@@ -1,6 +1,8 @@
 .card-deck{
     padding: 50px;
-    color: black;
+}
+.body-content{
+    width: 90%;
 }
 @media only screen and (max-width: 320px) {
     .body-content{

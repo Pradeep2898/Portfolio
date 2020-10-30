@@ -1,5 +1,26 @@
- <div class="body-content" >
+ <div class="body-content">
   <ul *ngFor="let wk of work">
+    <li>
+      <div class="card border-light text-white" style="background-color: #ffffff1a;">
+        <div class="row no-gutters">
+            <div class="col-sm-2">
+                <img [src]="wk.image" alt="project preview" style="height: 100%; width: 100%;">
+            </div>
+            <div class="col">
+                <div class="card-block" style="margin: 3%;">
+                    <h4 class="card-title" style="border-left: 3px solid rosybrown; padding-left: 5px;">{{wk.title}}</h4>
+                    <p class="card-text">{{wk.desc}}</p>
+                    <a [attr.href]="wk.link" target="_blank">Try it out</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer w-100 text-muted" style="background-color: #706f6f1f;">
+            <small>{{wk.date}}</small>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <!--<ul *ngFor="let wk of work">
     <li style="display: inline;">
       <div class="card border-light text-white col-sm-4" style="background-color: #ffffff1a;">
         <img class="card-img-top" [src]="wk.image"  alt="project preview">
@@ -13,7 +34,7 @@
         </div>
       </div>
     </li>
-  </ul>
+  </ul> -->
   <!-- <div class="card-deck" *ngFor="let wk of work">
     <div class="card border-light text-white mb-3" style="background-color: #ffffff1a;">
       <img class="card-img-top" [src]="wk.image"  alt="project preview">
