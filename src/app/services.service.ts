@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
-import { Experience } from './models/Experience';
-import { Work } from './models/Work';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +10,7 @@ import { Work } from './models/Work';
 export class ServicesService {
 
   private api = "https://mailthis.to/Howdy";
+  private lpapi = "http://api.linkpreview.net/?key=123456&q=https://www.fb.com";
   aboutMedesc: Observable<any>;
   shortDesc: Observable<any>;
   profilePic: Observable<any>;
@@ -20,6 +19,12 @@ export class ServicesService {
 
   constructor(private http:HttpClient, private afs:AngularFirestore) { 
     
+  }
+
+  getThumbnail(){
+    return this.http.get(this.lpapi).subscribe(data =>{
+        console.log(data);
+    })
   }
 
   postMessage(input:any){

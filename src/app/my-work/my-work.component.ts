@@ -16,8 +16,8 @@ export class MyWorkComponent implements OnInit {
   ngOnInit(): void {
     this.serv.getWorkList().subscribe(data => {
       this.work = data;
-      console.log(this.work);
     });
+    this.serv.getThumbnail();
   }
 
 }
