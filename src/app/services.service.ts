@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class ServicesService {
 
   private api = "https://mailthis.to/Howdy";
+  text = '';
   // private lpapi = "http://api.linkpreview.net/?key=123456&q=https://www.fb.com";
   aboutMedesc: Observable<any>;
   shortDesc: Observable<any>;
@@ -21,11 +22,11 @@ export class ServicesService {
     
   }
 
-  // getThumbnail(){
-  //   return this.http.get(this.lpapi).subscribe(data =>{
-  //       console.log(data);
-  //   })
-  // }
+  getThumbnail(){
+    return this.http.post("http://pradeep-anand-portfolio.herokuapp.com", JSON.stringify({ text: this.text })).subscribe(data =>{
+        console.log(data);
+    })
+  }
 
   postMessage(input:any){
     return this.http.post(this.api, input, { responseType: 'text' }).pipe(

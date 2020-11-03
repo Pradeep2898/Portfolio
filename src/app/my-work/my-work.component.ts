@@ -17,6 +17,8 @@ export class MyWorkComponent implements OnInit {
     this.serv.getWorkList().subscribe(data => {
       this.work = data;
     });
+
+    this.serv.getThumbnail();
   }
 
 }
