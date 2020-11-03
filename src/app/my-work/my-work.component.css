@@ -4,6 +4,9 @@
 .body-content{
     width: 90%;
 }
+.body-content ul{
+    list-style: none;
+}
 @media only screen and (max-width: 320px) {
     .body-content{
         width:400px;
