@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
     });
     this.serv.getProfileImage().subscribe(data => {
       this.profilePic = data;
-    })
+    });
   }
 
 }

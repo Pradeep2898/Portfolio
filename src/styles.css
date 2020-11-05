@@ -1,8 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    /* background-color: #181818; */
-    background-image: url("./assets/images/origin.gif");
-    background-size: auto;
+    background-color: #01020c;
+    /* background-image: url("./assets/images/origin.gif");
+    background-size: auto; */
     color: #ffffff;
     font-family: "Muli";
 }
+::-webkit-scrollbar {
+    width: 7px;
+  }
+::-webkit-scrollbar-track {
+    background: #01020c;
+    border-radius: 10px;
+  }
+::-webkit-scrollbar-thumb {
+    background: gray; 
+    border-radius: 10px;
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: white; 
+  }

@@ -10,7 +10,7 @@
 }
 .footer ul{
     margin-bottom: 0;
-    padding: 25px;
+    padding: 15px;
 }
 .footer ul li{
     display: inline-block;
@@ -23,7 +23,7 @@
     text-decoration: none;
 }
 @media only screen and (max-width: 320px) {
-    .navbar, .footer{
+    .header, .footer{
         width:400px;
     }
-}  
+}

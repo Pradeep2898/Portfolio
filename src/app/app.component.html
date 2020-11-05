@@ -1,8 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
-
+  <particles [params]="myParams" [style]="myStyle" [width]="width"></particles>
 <body>
-  <nav class="navbar navbar-expand-sm navbar-dark" style="font-family: 'Poppins';">
+  
+  <nav class="header navbar navbar-expand-sm navbar-dark" style="font-family: 'Poppins';">
     <a class="navbar-brand" routerLink="/home"><img src="../assets/images/howdy-white.png"
         style="width:45px; height:45px;" /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -18,7 +19,7 @@
     </div>
   </nav>
   <router-outlet></router-outlet>
-  <div class="footer">
+  <div class="footer navbar">
     <ul>
       <li><a routerLink="/home">Home</a></li>
       <li><a routerLink="/contact">Contact Me</a></li>
@@ -27,5 +28,4 @@
     </ul>
   </div>
 </body>
-
 </html>

@@ -14,6 +14,7 @@ import { ServicesService} from './services.service';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { ParticlesModule } from 'angular-particle';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     HttpClientModule,
     NgxSpinnerModule,
     AngularFireModule.initializeApp(environment.firebase, 'portfolio'),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ParticlesModule
   ],
   providers: [ServicesService],
   bootstrap: [AppComponent]
