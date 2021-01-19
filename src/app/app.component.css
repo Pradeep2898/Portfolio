@@ -16,8 +16,16 @@
     display: inline-block;
     padding-right: 15px;
 }
-.footer ul li a:hover{
-    border-bottom: 2px solid white;
+.footer ul li a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width .3s;
+}
+.footer ul li a:hover::after{
+    width: 100%;
 }
 .footer ul li a{
     text-decoration: none;

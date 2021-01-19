@@ -3,7 +3,7 @@
   <particles [params]="myParams" [style]="myStyle" [width]="width"></particles>
 <body>
   
-  <nav class="header navbar navbar-expand-sm navbar-dark" style="font-family: 'Poppins';">
+  <nav class="header navbar navbar-expand-sm navbar-dark" style="font-family: 'Poppins'; position: fixed; top: 0; z-index: 2; background-color: #01020c; width: 100%; opacity: .9;">
     <a class="navbar-brand" routerLink="/home"><img src="../assets/images/howdy-white.png"
         style="width:45px; height:45px;" /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -13,7 +13,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link mb-0 h5" routerLink="/home">Home</a>
-        <a class="nav-item nav-link mb-0 h5" routerLink="/work">My Work</a>
+        <a class="nav-item nav-link mb-0 h5" routerLink="/work">My Works</a>
         <a class="nav-item nav-link mb-0 h5" routerLink="/contact">Contact Me</a>
       </div>
     </div>
@@ -24,6 +24,7 @@
       <li><a routerLink="/home">Home</a></li>
       <li><a routerLink="/contact">Contact Me</a></li>
       <li style="color: gold;">Copyright &copy; Pradeep Anand 2020</li>
+      <li><a routerLink="/work">My Works</a></li>
       <li><a href="https://github.com/Pradeep2898/Portfolio.git" target="_blank">More about this website</a></li>
     </ul>
   </div>
